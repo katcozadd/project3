@@ -19,7 +19,6 @@ app.use(function(req, res, next) {
 app.post('/contact', function(req, res) {
 	console.log(req.body);
 			sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-			console.log(process.env.SENDGRID_API_KEY);
 				const msg = {
 				  to: 'krosecozadd@gmail.com',
 				  from: `${req.body.email}`,
