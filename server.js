@@ -12,8 +12,8 @@ app.post('/contact', function(req, res) {
 			sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 			console.log(process.env.SENDGRID_API_KEY);
 				const msg = {
-				  to: `${req.body.email}`,
-				  from: 'hello@acafeboise.com',
+				  to: 'krosecozadd@gmail.com',
+				  from: `${req.body.email}`,
 				  subject: 'New contact submission from acafeboise.com: ' `${req.body.subject}`,
 				  text: `${req.body.message}`,
 				  html: `${req.body.message}`,
