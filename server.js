@@ -23,7 +23,7 @@ app.post('/contact', function(req, res) {
 				const msg = {
 				  to: 'krosecozadd@gmail.com',
 				  from: `${req.body.email}`,
-				  subject: 'New contact submission from acafeboise.com: ' `${req.body.subject}`,
+				  subject: 'New contact submission from acafeboise.com: ' + `${req.body.subject}`,
 				  text: `${req.body.message}`,
 				  html: `${req.body.message}`,
 				};
@@ -34,7 +34,6 @@ app.post('/contact', function(req, res) {
 // app.get('/contact', function(req, res) {
 // 	res.json(msg);
 // })
-
 
 // listen on port 3000
   app.set('port', process.env.PORT || 3001)
