@@ -3,6 +3,7 @@ const app        = express();
 const path       = require('path');
 const bodyParser = require('body-parser');
 const sgMail     = require('@sendgrid/mail');
+const cors       = require('cors')
 require('dotenv').config();
 
 
@@ -21,6 +22,10 @@ app.post('/contact', function(req, res) {
 				sgMail.send(msg);
 				res.json(msg);
 	});
+
+// app.get('/contact', function(req, res) {
+// 	res.json(msg);
+// })
 
 
 // listen on port 3000
