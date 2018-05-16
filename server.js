@@ -30,9 +30,6 @@ app.post('/contact', function(req, res) {
 				res.json(msg);
 	});
 
-// app.get('/contact', function(req, res) {
-// 	res.json(msg);
-// })
 
 // listen on port 3000
   app.set('port', process.env.PORT || 3001)
